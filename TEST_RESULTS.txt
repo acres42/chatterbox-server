@@ -1,0 +1,167 @@
+`http://127.0.0.1:3000/classes/messages`,
+
+billm@Hawkeye:/mnt/c/dev/hrr36-chatterbox-server$ npm test
+
+> chatterbox-server@1.1.0 test /mnt/c/dev/hrr36-chatterbox-server
+> mocha server/spec
+
+
+
+  server
+    1) should respond to GET requests for /classes/messages with a 200 status code
+    2) should send back parsable stringified JSON
+    3) should send back an object
+    4) should send an object containing a `results` array
+    5) should accept POST requests to /classes/messages
+    6) should respond with messages that were previously posted
+    7) Should 404 when asked for a nonexistent endpoint
+
+  Node Server Request Listener Function
+/classes/messages
+    8) Should answer GET requests for /classes/messages with a 200 status code
+/classes/messages
+    9) Should send back parsable stringified JSON
+/classes/messages
+    10) Should send back an object
+/classes/messages
+    11) Should send an object containing a `results` array
+/classes/messages
+Serving request type POST for url /classes/messages
+    12) Should accept posts to /classes/messages
+/classes/messages
+Serving request type POST for url /classes/messages
+    13) Should respond with messages that were previously posted
+/arglebargle
+Serving request type GET for url /arglebargle
+    14) Should 404 when asked for a nonexistent file
+
+
+  0 passing (78ms)
+  14 failing
+
+  1) server should respond to GET requests for /classes/messages with a 200 status code:
+     Uncaught TypeError: Cannot read property 'statusCode' of undefined
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:7:23)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  2) server should send back parsable stringified JSON:
+     Uncaught AssertionError: expected [Function: bound parse] to not throw an error but 'SyntaxError: Unexpected token u in JSON at position 0' was thrown
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:14:55)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  3) server should send back an object:
+     Uncaught SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:21:29)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  4) server should send an object containing a `results` array:
+     Uncaught SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:29:29)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  5) server should accept POST requests to /classes/messages:
+     Uncaught TypeError: Cannot read property 'statusCode' of undefined
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:45:23)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  6) server should respond with messages that were previously posted:
+     Uncaught SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:61:29)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  7) server Should 404 when asked for a nonexistent endpoint:
+     Uncaught TypeError: Cannot read property 'statusCode' of undefined
+      at Request._callback (server/spec/LiveServerIntegrationSpec.js:71:23)
+      at self.callback (node_modules/request/request.js:185:22)
+      at Request.onRequestError (node_modules/request/request.js:881:8)
+      at Socket.socketErrorListener (_http_client.js:401:9)
+      at emitErrorNT (internal/streams/destroy.js:66:8)
+      at _combinedTickCallback (internal/process/next_tick.js:139:11)
+      at process._tickCallback (internal/process/next_tick.js:181:9)
+
+  8) Node Server Request Listener Function Should answer GET requests for /classes/messages with a 200 status code:
+     ReferenceError: index is not defined
+      at Object.requestHandler (server/request-handler.js:27:18)
+      at Context.<anonymous> (server/spec/ServerSpec.js:12:13)
+
+  9) Node Server Request Listener Function Should send back parsable stringified JSON:
+     ReferenceError: index is not defined
+      at Object.requestHandler (server/request-handler.js:27:18)
+      at Context.<anonymous> (server/spec/ServerSpec.js:22:13)
+
+  10) Node Server Request Listener Function Should send back an object:
+     ReferenceError: index is not defined
+      at Object.requestHandler (server/request-handler.js:27:18)
+      at Context.<anonymous> (server/spec/ServerSpec.js:32:13)
+
+  11) Node Server Request Listener Function Should send an object containing a `results` array:
+     ReferenceError: index is not defined
+      at Object.requestHandler (server/request-handler.js:27:18)
+      at Context.<anonymous> (server/spec/ServerSpec.js:43:13)
+
+  12) Node Server Request Listener Function Should accept posts to /classes/messages:
+
+      AssertionError: expected 200 to equal 201
+      + expected - actual
+
+      -200
+      +201
+
+      at Context.<anonymous> (server/spec/ServerSpec.js:62:34)
+
+  13) Node Server Request Listener Function Should respond with messages that were previously posted:
+
+      AssertionError: expected 200 to equal 201
+      + expected - actual
+
+      -200
+      +201
+
+      at Context.<anonymous> (server/spec/ServerSpec.js:80:34)
+
+  14) Node Server Request Listener Function Should 404 when asked for a nonexistent file:
+
+      AssertionError: expected 200 to equal 404
+      + expected - actual
+
+      -200
+      +404
+
+      at Context.<anonymous> (server/spec/ServerSpec.js:102:34)
+
+
+
+npm ERR! Test failed.  See above for more details.
